@@ -4,6 +4,36 @@ import { MapPin, Calendar, Ruler, Star, ArrowRight, Eye, X } from 'lucide-react'
 
 const projects = [
   {
+    image: '/images/gallery/legal-basement.webp',
+    neighborhood: 'Yorkville',
+    type: 'Legal Basement Suite',
+    heightGained: '30 inches',
+    duration: '8 weeks',
+    year: '2024',
+    testimonial: 'Now have a fully legal basement apartment generating rental income!',
+    rating: 5,
+    client: 'Patricia K.',
+    beforeAfter: {
+      before: '/images/process/excavation-underpinning.webp',
+      after: '/images/gallery/legal-basement.webp'
+    }
+  },
+  {
+    image: '/images/gallery/heated-floor.jpg',
+    neighborhood: 'Forest Hill',
+    type: 'Luxury Renovation',
+    heightGained: '28 inches',
+    duration: '10 weeks',
+    year: '2024',
+    testimonial: 'Added radiant floor heating during underpinning. Game changer!',
+    rating: 5,
+    client: 'Anthony B.',
+    beforeAfter: {
+      before: '/images/process/underpinning-finished-no-slab.webp',
+      after: '/images/gallery/heated-floor.jpg'
+    }
+  },
+  {
     image: '/images/gallery/finished-basement-1.png',
     neighborhood: 'Leslieville',
     type: 'Victorian Semi-Detached',
