@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/HeroImproved';
+import Benefits from '../components/Benefits';
+import ImageShowcase from '../components/ImageShowcase';
+import CostCalculator from '../components/CostCalculator';
+import Process from '../components/Process';
+import Permits from '../components/Permits';
+import Methods from '../components/Methods';
+import Gallery from '../components/Gallery';
+import FAQs from '../components/FAQs';
+import FinalCTA from '../components/FinalCTA';
+
+const title = "Basement Underpinning Toronto | Spaders - Engineered, Permitted & WSIB";
+const description = "Spaders: Professional basement underpinning in Toronto—engineered & permitted to OBC 2024/25. WSIB clearance. Toronto fee: $11.89/lin m included. Call 437-545-0067.";
+const canonical = "https://spaders.ca/basement-underpinning-toronto/";
+
+// Structured Data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://spaders.ca/#underpinning",
+  "name": "Spaders Underpinning & Basement Lowering",
+  "image": "https://spaders.ca/static/og/underpinning.jpg",
+  "url": "https://spaders.ca/basement-underpinning-toronto/",
+  "telephone": "+1-437-545-0067",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1200 Bay Street",
+    "addressLocality": "Toronto",
+    "addressRegion": "ON",
+    "postalCode": "M5R 2A5",
+    "addressCountry": "CA"
+  },
+  "geo": { 
+    "@type": "GeoCoordinates", 
+    "latitude": 43.653, 
+    "longitude": -79.383 
+  },
+  "areaServed": [
+    {"@type":"City","name":"Toronto"},
+    {"@type":"City","name":"Mississauga"},
+    {"@type":"City","name":"Scarborough"},
+    {"@type":"City","name":"Etobicoke"},
+    {"@type":"City","name":"North York"},
+    {"@type":"City","name":"East York"},
+    {"@type":"City","name":"York"},
+    {"@type":"City","name":"Vaughan"}
+  ],
+  "sameAs": [
+    "https://www.google.com/maps?cid=YOUR_GMB_CID",
+    "https://www.bbb.org/PROFILE_URL"
+  ],
+  "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-16:00",
+  "aggregateRating": { 
+    "@type": "AggregateRating", 
+    "ratingValue": "4.8", 
+    "reviewCount": "187" 
+  },
+  "makesOffer": [
+    { 
+      "@type": "Offer", 
+      "itemOffered": { 
+        "@type": "Service", 
+        "name": "Basement Underpinning",
+        "description": "Full basement underpinning to increase ceiling height and strengthen foundation"
+      } 
+    },
+    { 
+      "@type": "Offer", 
+      "itemOffered": { 
+        "@type": "Service", 
+        "name": "Basement Lowering",
+        "description": "Professional basement lowering services for Toronto homes"
+      } 
+    },
+    { 
+      "@type": "Offer", 
+      "itemOffered": { 
+        "@type": "Service", 
+        "name": "Bench Footing",
+        "description": "Cost-effective bench footing alternative to underpinning"
+      } 
+    }
+  ]
+};
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I really need a permit for basement underpinning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, absolutely. Toronto requires a building permit for underpinning with specific drawings (including staged sequencing and total linear metres) and forms. We prepare, submit, and coordinate all inspections for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What will the City of Toronto charge me for the permit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toronto uses a linear-metre fee for underpinning permits. For applications on or after January 1, 2025, the City charges $11.89 per linear metre. We measure the metres from your engineered drawings and include this fee in your detailed estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How high should we go for a legal basement apartment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ontario guidance requires a minimum 1.95m (6'5\") ceiling height for legal basement apartments. We design your target dig depth and finished assembly with this requirement in mind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you covered by WSIB?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Expanded compulsory coverage applies to all construction businesses in Ontario. We provide a WSIB Clearance Certificate for every project and verify all subcontractor coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the permit approval process take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Ontario Building Code sets administrative timelines of approximately 10 business days for house permits. However, actual timing depends on submission completeness and City workload."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqStructuredData)} />
+  
+  <main>
+    <Hero client:load />
+    <Benefits client:load />
+    <ImageShowcase client:load />
+    <CostCalculator client:load />
+    <Process client:load />
+    <Permits client:load />
+    <Methods client:load />
+    <Gallery client:load />
+    <FAQs client:load />
+    <FinalCTA client:load />
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 sm:py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+        <div>
+          <h3 class="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="/basement-underpinning-toronto/" class="hover:text-white">Basement Underpinning</a></li>
+            <li><a href="/bench-footing/" class="hover:text-white">Bench Footing</a></li>
+            <li><a href="/basement-waterproofing/" class="hover:text-white">Waterproofing</a></li>
+            <li><a href="/walkout-basement/" class="hover:text-white">Walkout Basements</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Service Areas</h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="/toronto/" class="hover:text-white">Toronto</a></li>
+            <li><a href="/north-york/" class="hover:text-white">North York</a></li>
+            <li><a href="/scarborough/" class="hover:text-white">Scarborough</a></li>
+            <li><a href="/etobicoke/" class="hover:text-white">Etobicoke</a></li>
+            <li><a href="/mississauga/" class="hover:text-white">Mississauga</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Resources</h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="/permits-guide/" class="hover:text-white">Permit Guide</a></li>
+            <li><a href="/cost-calculator/" class="hover:text-white">Cost Calculator</a></li>
+            <li><a href="/faqs/" class="hover:text-white">FAQs</a></li>
+            <li><a href="/blog/" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li>437-545-0067</li>
+            <li>info@spaders.ca</li>
+            <li>1200 Bay Street</li>
+            <li>Toronto, ON M5R 2A5</li>
+          </ul>
+          <div class="flex gap-4 mt-4">
+            <a href="#" class="hover:text-white">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="hover:text-white">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-xs sm:text-sm text-center">
+        <p>&copy; 2025 Spaders. All rights reserved. | Licensed & Insured | WSIB Clearance</p>
+        <p class="mt-2">
+          <a href="/privacy/" class="hover:text-white">Privacy Policy</a> | 
+          <a href="/terms/" class="hover:text-white ml-2">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</Layout>
